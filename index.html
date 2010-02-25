@@ -9,6 +9,7 @@
 <script src="js/modernizr-1.1.min.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
 
 <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" title="html5doctor.com Reset Stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/css3.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/general.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
 
@@ -84,14 +85,29 @@ footer { font-size:.8em; }
     </aside>
     
     <div class="content col_12 col">
-      <article>
-        	<h1>This is a title h1</h1>
+        <article>
+            <h1>This is a title h1</h1>
             <blockquote class="right">This is what a blockquote will look like, floated right.<br />Testing a second line inside the blockquote.</blockquote>
             <p>Lorem ipsum <a href="#">link one</a> dolor sit amet, consectetur adipiscing elit. Nullam  a purus ac est dapibus feugiat eu eget nulla. Sed molestie feugiat viverra. Pellentesque consectetur, leo in faucibus congue, elit purus bibendum tellus, non tincidunt tortor mauris in sem. Suspendisse sodales metus eget sem suscipit eleifend. Proin porttitor, ante vel egestas pretium, nulla eros mollis eros, dapibus molestie lacus mi at sapien. Fusce risus risus, vulputate vel bibendum nec, accumsan non lacus.Fusce viverra mollis sapien non mattis. Suspendisse id est sapien. Aliquam quis tellus sed lorem fermentum rutrum in eget urna. Mauris ac dolor sit amet tellus tristique eleifend. Morbi venenatis ultricies eleifend. Nunc arcu lorem, feugiat pulvinar laoreet convallis, consequat sed elit. Suspendisse potenti.Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin. Aenean semper tortor nunc, dignissim malesuada arcu. Nunc nec massa a erat consectetur porta vitae eu mauris. Donec a orci dolor. Sed ac erat sed ipsum imperdiet accumsan. </p>
-      </article>  
-      <article>
-      	<!-- "Video For Everybody" v0.3
-     	=================================================================================================================== -->
+        </article>  
+        <article>
+        	<h2>CSS3 Elements that degrade nicely in older browsers</h2>
+            <div class="shadows">
+            	<h3>Shadows</h3>
+                <p>
+                	<span class="shadow">This text has a gray shadow</span>
+                </p>
+                <h3>Rounded Corners and Shadows</h3>
+                <p class="rounded" style="width:180px; padding:4px;">This has rounded corners</p>
+                <p class="rounded_top_right box_shadow" style="width:250px; padding:4px;">This has the top right coruner rounded only!</p>
+                <h3>Rotation and Animation</h3>
+                <p class="rotate" style="width:50px; height:50px; border:1px solid #ccc; padding:5px; margin-left:15px;">Rotated Paragraph</p>
+                
+            </div>
+        </article>
+        <article>
+        <!-- "Video For Everybody" v0.3
+        =================================================================================================================== -->
         <!-- first try HTML5 playback. if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
         <video width="640" height="360" poster="images/poster.jpg" controls>
             <source src="video/big_buck_bunny.OGV" type="video/ogg" /><!-- Firefox native OGG video -->
@@ -127,17 +143,17 @@ footer { font-size:.8em; }
             Video is the first minute from the cc-by licenced “open movie” <a href="http://bigbuckbunny.org">Big Buck Bunny</a>
         </p>
         <p><a href="http://camendesign.com/code/video_for_everybody/player.swf">download</a>
-      </article>
+        </article>
         <article> 
-			<h2>This is an h2</h2>
-      <p>Nulla facilisi. Etiam eget laoreet turpis. Duis magna odio, volutpat eu varius vitae, interdum eu felis. Pellentesque luctus tincidunt urna vel dictum. Etiam facilisis purus ut lorem aliquet eleifend. Sed porttitor semper turpis mattis iaculis. Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin.
+            <h2>This is an h2</h2>
+        <p>Nulla facilisi. Etiam eget laoreet turpis. Duis magna odio, volutpat eu varius vitae, interdum eu felis. Pellentesque luctus tincidunt urna vel dictum. Etiam facilisis purus ut lorem aliquet eleifend. Sed porttitor semper turpis mattis iaculis. Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin.
            <code>
-            	
-            	css {<br>
+                
+                css {<br>
                 -moz-border-radius: 5px; <br>
-				-webkit-border-radius: 5px;<br>
-				-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);<br>
-				-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);<br>
+                -webkit-border-radius: 5px;<br>
+                -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);<br>
+                -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);<br>
                 }<br><br>
                
                 &lt;body&gt;<br>
@@ -158,43 +174,42 @@ footer { font-size:.8em; }
                 &lt;/body&gt;<br>
                 
            </code>
-      <p></p>
+        <p></p>
              Aenean semper tortor nunc, dignissim malesuada arcu. Nunc nec massa a erat consectetur porta vitae eu mauris. Donec a orci dolor. Sed ac erat sed ipsum imperdiet accumsan. Nullam commodo neque adipiscing lacus sagittis sit amet dictum urna vestibulum. Nulla sapien turpis, laoreet in lacinia sed, malesuada sit amet odio. Maecenas cursus mauris vel nunc adipiscing id bibendum ipsum faucibus.</p>
         <article>    
             <h3>This is an h3</h3>
-			<p>Duis ac arcu ante, at lacinia dui. Ut eget justo in nulla rutrum mollis. Mauris euismod justo et quam bibendum laoreet volutpat lorem mollis. In hac habitasse platea dictumst.
+            <p>Duis ac arcu ante, at lacinia dui. Ut eget justo in nulla rutrum mollis. Mauris euismod justo et quam bibendum laoreet volutpat lorem mollis. In hac habitasse platea dictumst.
             <pre>This is a pre tag</pre>
              Mauris ut eleifend neque. Duis nulla metus, tempus nec varius quis, tincidunt consectetur nisi. Donec rhoncus quam vel quam bibendum rutrum. Mauris et commodo felis. Nam varius eleifend nulla quis sagittis. Quisque id tortor at dolor dictum interdum.</p>
-	  </article>
-         <article>
-		 	<h2>List Elements</h2>
+        </article>
+        <article>
+            <h2>List Elements</h2>
             <ul>
-            	<li>List item 1</li>
+                <li>List item 1</li>
                 <li>List item 2</li>
             </ul>	
             <div class="clear" style="height:20px;"></div>			
-			<h2>Other Elements Styling</h2>	
-			
-			<p>
-					This is <abbr title="title">abbreviation</abbr><br>
-					This is <strong>strong</strong><br>
-					This is <em>emphasis</em><br>
-					This is <b>bold text</b><br>
-					This is <i>italic text</i><br>
-					This is <cite>cite</cite><br>
-					This is <small>small text</small><br>
-					This is <big>big text</big><br>
-					This is <del>deleted text</del><br>
-					This is <ins>inserted text</ins><br>
-					This is <dfn>defining instance</dfn><br>
-					This is <kbd>user input</kbd><br>
-					This is <samp>sample output</samp><br>
-					This is <q>inline quotation</q> <br>
-					These are <sub>subscript</sub> and <sup>superscript</sup><br>
-					This is <var>a variable</var>
-			</p>
-			
-		 </article>
+            <h2>Other Elements Styling</h2>	
+            
+            <p>
+                    This is <abbr title="title">abbreviation</abbr><br>
+                    This is <strong>strong</strong><br>
+                    This is <em>emphasis</em><br>
+                    This is <b>bold text</b><br>
+                    This is <i>italic text</i><br>
+                    This is <cite>cite</cite><br>
+                    This is <small>small text</small><br>
+                    This is <big>big text</big><br>
+                    This is <del>deleted text</del><br>
+                    This is <ins>inserted text</ins><br>
+                    This is <dfn>defining instance</dfn><br>
+                    This is <kbd>user input</kbd><br>
+                    This is <samp>sample output</samp><br>
+                    This is <q>inline quotation</q> <br>
+                    These are <sub>subscript</sub> and <sup>superscript</sup><br>
+                    This is <var>a variable</var>
+            </p>
+        </article>
   </div><!-- end content -->
   <div class="clear" style="height:10px; border-bottom:1px solid #ccc;"></div>
 </div><!-- end wrap -->
