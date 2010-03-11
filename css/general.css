@@ -7,15 +7,15 @@ body {
 }
 
 /* ** ** Common Addative Classes ** ** */
-.left  { float:left}
-.right { float:right}
-.clear { clear:both; display:block; overflow:hidden; visibility:hidden; width:0px; height:0px;}
-.hide  { display:none}
+.left, .float_left  { float:left	}
+.right, float_right { float:right	}
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; height:0px;}
+.hide  { display:none	}
 
-.align_right    { text-align:right;}
-.align_left     { text-align:left;}
-.align_center   { text-align:center;}
-.align_justify  { text-align:justify;}
+.align_right    { text-align:right;	  }
+.align_left     { text-align:left;	  }
+.align_center   { text-align:center;  }
+.align_justify  { text-align:justify; }
 
 a {	color:#525252;	}
 a:hover, a:focus { text-decoration:underline;}
@@ -32,8 +32,8 @@ blockquote {
 		width:100%; 
 		quotes:none;
 	}
-	blockquote.left {border-right:1px dashed #ccc; width:35%;}
-	blockquote.right {border-left:1px dashed #ccc; width:35%;}
+	blockquote.left {border-right:1px dashed #ccc; width:35%;} /* float blockquote left, and set width */
+	blockquote.right {border-left:1px dashed #ccc; width:35%;} /* float blockquote right and set a width */
 
 /* ** ** Header Styles ** ** */
 h1, h2, h3, h4, h5 {margin:0 0 0.5em; line-height:1.1em;}
@@ -47,7 +47,7 @@ h6 {	font-size:1.52em;}
 /* ** ** ul li's ** ** */
 ul li
 {
-	margin-left:25px;
+	margin-left:20px;
 }
 
 /* ** ** custom select color ** ** */
@@ -66,7 +66,15 @@ p {margin:0 0 1.52em;}
 /* ** ** forms ** ** */
 form fieldset {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px; padding-top:5px; padding-left:5px; border:1px solid #ccc; }
 form fieldset legend {font-size:1.4em; padding:0 5px;}
-form input[type=text], form input[type=email], form input[type=url] {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius:4px; height:20px; margin-bottom:5px; border:1px solid #ccc; padding:4px 0 1px 5px;}
+form input[type=text], form input[type=email], form input[type=url], form input[type=password] {
+		-moz-border-radius: 4px; 
+		-webkit-border-radius: 4px; 
+		border-radius:4px; 
+		height:20px; 
+		margin-bottom:5px; 
+		border:1px solid #ccc; 
+		padding:4px 0 1px 5px;
+		}
 form label {display:block; height:20px; font-size:1.2em;}
 
 
