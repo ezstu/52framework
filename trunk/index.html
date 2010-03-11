@@ -7,6 +7,23 @@
 <meta name="description" content="your description here" />
 
 <script src="js/modernizr-1.1.min.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
+<!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+
+<!-- Canvas example taken from https://developer.mozilla.org/en/Canvas_tutorial/Basic_usage -->
+<script>
+	function draw() {
+      var canvas = document.getElementById("b");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "rgb(200,0,0)";
+        ctx.fillRect (10, 10, 55, 50);
+
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect (30, 30, 55, 50);
+      }
+    }
+</script>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" title="html5doctor.com Reset Stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/css3.css" media="screen" />
@@ -47,7 +64,7 @@ aside {min-height:525px;}
 footer { font-size:.8em; } 
 </style>
 </head>
-<body>
+<body  onload="draw();">
 <div class="row">
     <header>
         <div class="logo left">52framework</div>
@@ -71,7 +88,8 @@ footer { font-size:.8em; }
         <form>
         	<fieldset><legend>Fieldset</legend>
                 <label for="normalText">Normal Text</label>
-                <input type="text" value="normal text field" name="normalText" id="normalText" class="width_3" />
+                <input type="text" value="normal text field" name="normalText" id="normalText" class="width_3" placeholder="Placeholder for Normal Text" autofocus />
+                <!-- placeholder text is text that stays in the input field until clicked, autofocus will select that element on the page -->
                 <label for="email">Email</label>
                 <input type="email" value="email@field.com" name="email" id="email" class="width_3" />
                 <label for="url">URL</label>
@@ -93,18 +111,24 @@ footer { font-size:.8em; }
         <article>
         	<h2>CSS3 Elements that degrade nicely in older browsers</h2>
             <div class="shadows">
-            	<h3>Shadows</h3>
+            	<h4>Shadows</h3>
                 <p>
                 	<span class="shadow">This text has a gray shadow</span>
                 </p>
-                <h3>Rounded Corners and Shadows</h3>
+                <h4>Rounded Corners and Shadows</h3>
                 <p class="rounded" style="width:180px; padding:4px;">This has rounded corners</p>
                 <p class="rounded_top_right box_shadow" style="width:250px; padding:4px;">This has the top right coruner rounded only!</p>
-                <h3>Rotation and Animation</h3>
-                <p class="rotate" style="width:50px; height:50px; border:1px solid #ccc; padding:5px; margin-left:15px;">Rotated Paragraph</p>
+                <h4>Rotation and Animation</h3>
+                <p class="rotate" style="width:80px; height:50px; border:1px solid #ccc; padding:5px; margin-left:15px;">Rotated Paragraph</p>
                 
             </div>
         </article>
+        
+        <article>
+        	<h2>Canvas</h2>
+        	<canvas id="b" width="90" height="90"></canvas>
+        </article>
+        
         <article>
         <!-- "Video For Everybody" v0.3
         =================================================================================================================== -->
