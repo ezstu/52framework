@@ -134,8 +134,8 @@ footer { font-size:.8em; }
         =================================================================================================================== -->
         <!-- first try HTML5 playback. if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
         <video width="640" height="360" poster="images/poster.jpg" controls>
-            <source src="video/big_buck_bunny.OGV" type="video/ogg" /><!-- Firefox native OGG video -->
-            <source src="video/big_buck_bunny.mp4" type="video/mp4" /><!-- Safari / iPhone video -->
+            <source src="http://52framework.s3.amazonaws.com/big_buck_bunny.ogv" type="video/ogg" /><!-- Firefox native OGG video -->
+            <source src="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4" type="video/mp4" /><!-- Safari / iPhone video -->
             <!-- IE only QuickTime embed: IE6 is ignored as it does not support `<object>` in `<object>` so we skip QuickTime
                  and go straight to Flash further down. the line break after the `classid` is required due to a bug in IE -->
             <!--[if gt IE 6]>
@@ -144,15 +144,15 @@ footer { font-size:.8em; }
             <!-- non-IE QuickTime embed (hidden from IE): the self-closing comment tag allows non-IE browsers to
                  see the HTML whilst being compatible with serving as XML -->
             <!--[if !IE]><!-->
-            <object width="640" height="375" type="video/quicktime" data="video/big_buck_bunny.mp4">
+            <object width="640" height="375" type="video/quicktime" data="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4">
             <!--<![endif]-->
-            <param name="src" value="video/big_buck_bunny.mp4" />
+            <param name="src" value="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4" />
             <param name="showlogo" value="false" />
             <!-- fallback to Flash -->
             <object width="640" height="384" type="application/x-shockwave-flash"
-                data="video/player.swf?image=images/poster.jpg&amp;file=video/big_buck_bunny.mp4">
+                data="http://52framework.s3.amazonaws.com/player.swf?image=images/poster.jpg&amp;file=http://52framework.s3.amazonaws.com/big_buck_bunny.mp4">
                 <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
-                <param name="movie" value="video/player.swf?image=images/poster.jpg&amp;file=video/big_buck_bunny.mp4" />
+                <param name="movie" value="http://52framework.s3.amazonaws.com/player.swf?image=images/poster.jpg&amp;file=http://52framework.s3.amazonaws.com/big_buck_bunny.mp4" />
                 <!-- fallback image. download links are below the video. warning: putting anything more than
                      the fallback image in the fallback may trigger an iPhone OS3+ bug where the video will not play -->
                 <img src="images/poster.jpg" width="640" height="360" alt="The Sample Bunny Video"
@@ -162,11 +162,11 @@ footer { font-size:.8em; }
             </object><!--<![endif]-->
         </video>
         <!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
-        <p>Download Video: <a href="video/big_buck_bunny.mp4">Apple iTunes "mp4"</a> | <a href="__VIDEO__.OGV">Open Format "OGG"</a></p>
+        <p>Download Video: <a href="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4">Apple iTunes "mp4"</a> | <a href="http://52framework.s3.amazonaws.com/big_buck_bunny.ogv">Open Format "OGG"</a></p>
         <p>
             Video is the first minute from the cc-by licenced “open movie” <a href="http://bigbuckbunny.org">Big Buck Bunny</a>
         </p>
-        <p><a href="http://camendesign.com/code/video_for_everybody/player.swf">download</a>
+        <p><a href="http://camendesign.com/code/video_for_everybody/http://52framework.s3.amazonaws.com/player.swf">download</a>
         </article>
         <article> 
             <h2>This is an h2</h2>
