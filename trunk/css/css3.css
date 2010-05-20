@@ -33,3 +33,6 @@
 	-webkit-transform: rotate(-15deg);
 	-moz-transform: rotate(-15deg);
 }
+
+.gradient {background: -moz-linear-gradient(center bottom , rgb(209, 209, 209) 14%, rgb(230, 230, 230) 57%, rgb(224, 224, 224) 91%) repeat scroll 0% 0% transparent;
+}
