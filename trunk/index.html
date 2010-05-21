@@ -9,22 +9,6 @@
 <script src="js/modernizr-1.1.min.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
 <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
 
-<!-- Canvas example taken from https://developer.mozilla.org/en/Canvas_tutorial/Basic_usage -->
-<script>
-	function draw() {
-      var canvas = document.getElementById("b");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
-
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
-
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
-      }
-    }
-</script>
-
 <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" title="html5doctor.com Reset Stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/css3.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/general.css" media="screen" />
@@ -75,8 +59,9 @@ footer { font-size:.8em; }
         
         <nav>
         	<ul>
-            	<li class="active"><a href="http://52framework.com/demo">Home</a></li>
+            	<li class="active"><a href="/">Home</a></li>
                 <li><a href="css3.html">CSS3</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
                 <li><a href="http://52framework.com/documentation">Documentation</a></li>
                 <li><a href="http://52framework.com/about">About</a></li>
                 <li><a href="http://enavu.com">enavu</a></li>
@@ -109,67 +94,8 @@ footer { font-size:.8em; }
             <blockquote class="right">This is what a blockquote will look like, floated right.<br />Testing a second line inside the blockquote.</blockquote>
             <p>Lorem ipsum <a href="#">link one</a> dolor sit amet, consectetur adipiscing elit. Nullam  a purus ac est dapibus feugiat eu eget nulla. Sed molestie feugiat viverra. Pellentesque consectetur, leo in faucibus congue, elit purus bibendum tellus, non tincidunt tortor mauris in sem. Suspendisse sodales metus eget sem suscipit eleifend. Proin porttitor, ante vel egestas pretium, nulla eros mollis eros, dapibus molestie lacus mi at sapien. Fusce risus risus, vulputate vel bibendum nec, accumsan non lacus.Fusce viverra mollis sapien non mattis. Suspendisse id est sapien. Aliquam quis tellus sed lorem fermentum rutrum in eget urna. Mauris ac dolor sit amet tellus tristique eleifend. Morbi venenatis ultricies eleifend. Nunc arcu lorem, feugiat pulvinar laoreet convallis, consequat sed elit. Suspendisse potenti.Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin. Aenean semper tortor nunc, dignissim malesuada arcu. Nunc nec massa a erat consectetur porta vitae eu mauris. Donec a orci dolor. Sed ac erat sed ipsum imperdiet accumsan. </p>
         </article>  
-        <article>
-        	<h2>CSS3 Elements that degrade nicely in older browsers</h2>
-            <div class="shadows">
-            	<h4>Shadows</h3>
-                <p>
-                	<span class="shadow">This text has a gray shadow</span>
-                </p>
-                <h4>Rounded Corners and Shadows</h3>
-                <p class="rounded" style="width:180px; padding:4px;">This has rounded corners</p>
-                <p class="rounded_top_right box_shadow" style="width:250px; padding:4px;">This has the top right coruner rounded only!</p>
-                <h4>Rotation and Animation</h3>
-                <p class="rotate" style="width:80px; height:50px; border:1px solid #ccc; padding:5px; margin-left:15px;">Rotated Paragraph</p>
-                
-            </div>
-        </article>
-        
-        <article>
-        	<h2>Canvas</h2>
-        	<canvas id="b" width="90" height="90"></canvas>
-        </article>
-        
-        <article>
-        <!-- "Video For Everybody" v0.3
-        =================================================================================================================== -->
-        <!-- first try HTML5 playback. if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
-        <video width="640" height="360" poster="images/poster.jpg" controls>
-            <source src="http://52framework.s3.amazonaws.com/big_buck_bunny.ogv" type="video/ogg" /><!-- Firefox native OGG video -->
-            <source src="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4" type="video/mp4" /><!-- Safari / iPhone video -->
-            <!-- IE only QuickTime embed: IE6 is ignored as it does not support `<object>` in `<object>` so we skip QuickTime
-                 and go straight to Flash further down. the line break after the `classid` is required due to a bug in IE -->
-            <!--[if gt IE 6]>
-            <object width="640" height="375" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"><!
-            [endif]-->
-            <!-- non-IE QuickTime embed (hidden from IE): the self-closing comment tag allows non-IE browsers to
-                 see the HTML whilst being compatible with serving as XML -->
-            <!--[if !IE]><!-->
-            <object width="640" height="375" type="video/quicktime" data="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4">
-            <!--<![endif]-->
-            <param name="src" value="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4" />
-            <param name="showlogo" value="false" />
-            <!-- fallback to Flash -->
-            <object width="640" height="384" type="application/x-shockwave-flash"
-                data="http://52framework.s3.amazonaws.com/player.swf?image=images/poster.jpg&amp;file=http://52framework.s3.amazonaws.com/big_buck_bunny.mp4">
-                <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
-                <param name="movie" value="http://52framework.s3.amazonaws.com/player.swf?image=images/poster.jpg&amp;file=http://52framework.s3.amazonaws.com/big_buck_bunny.mp4" />
-                <!-- fallback image. download links are below the video. warning: putting anything more than
-                     the fallback image in the fallback may trigger an iPhone OS3+ bug where the video will not play -->
-                <img src="images/poster.jpg" width="640" height="360" alt="The Sample Bunny Video"
-                     title="No video playback capabilities, please download the video below"
-                />
-            </object><!--[if gt IE 6]><!-->
-            </object><!--<![endif]-->
-        </video>
-        <!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
-        <p>Download Video: <a href="http://52framework.s3.amazonaws.com/big_buck_bunny.mp4">Apple iTunes "mp4"</a> | <a href="http://52framework.s3.amazonaws.com/big_buck_bunny.ogv">Open Format "OGG"</a></p>
-        <p>
-            Video is the first minute from the cc-by licenced “open movie” <a href="http://bigbuckbunny.org">Big Buck Bunny</a>
-        </p>
-        <p><a href="http://camendesign.com/code/video_for_everybody/http://52framework.s3.amazonaws.com/player.swf">download</a>
-        </article>
-        <article> 
+       
+       <article> 
             <h2>This is an h2</h2>
         <p>Nulla facilisi. Etiam eget laoreet turpis. Duis magna odio, volutpat eu varius vitae, interdum eu felis. Pellentesque luctus tincidunt urna vel dictum. Etiam facilisis purus ut lorem aliquet eleifend. Sed porttitor semper turpis mattis iaculis. Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin.
            <code>
