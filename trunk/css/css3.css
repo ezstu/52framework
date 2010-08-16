@@ -1,13 +1,22 @@
 @charset "utf-8";
 /* CSS3 52framework */
+@font-face {
+	font-family: 'PTSansRegular';
+	src: url('PT_Sans-webfont.eot');
+	src: local('☺'), url('PT_Sans-webfont.woff') format('woff'), url('PT_Sans-webfont.ttf') format('truetype'), url('PT_Sans-webfont.svg#webfont6MwxiJev') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.fontface { font-family:'PTSansRegular', Arial, sans-serif; }
+
 
 /* 
 	The CSS3 Text-Shadow property contains the following values
 	horizontal-offset (length, required) | vertical-offset (length, required) | blur-radius (length, optional) | shadow-color (color, optional) 
 */
-.shadow {	text-shadow:1px 1px 1px #666;}/*<-- edit the color you wish to use in your shadows */
 
-
+.shadow {	text-shadow:1px 1px 1px #666;	}/*<-- edit the color you wish to use in your shadows */
 
 .rounded {
 	-webkit-border-radius: 5px;
@@ -24,9 +33,9 @@
 }
 
 .box_shadow {
-	-webkit-box-shadow: 2px 2px 3px #ccc;
-	-moz-box-shadow: 2px 2px 3px #ccc;
-	box-shadow: 2px 2px 3px #ccc;
+	-webkit-box-shadow: 1px 1px 3px #ccc;
+	-moz-box-shadow: 1px 1px 3px #ccc;
+	box-shadow: 1px 1px 3px #ccc;
 }
 
 .rotate {
@@ -34,5 +43,4 @@
 	-moz-transform: rotate(-15deg);
 }
 
-.gradient {background: -moz-linear-gradient(center bottom , rgb(209, 209, 209) 14%, rgb(230, 230, 230) 57%, rgb(224, 224, 224) 91%) repeat scroll 0% 0% transparent;
-}
+.gradient {background: -moz-linear-gradient(center bottom , rgb(209, 209, 209) 14%, rgb(230, 230, 230) 57%, rgb(224, 224, 224) 91%) repeat scroll 0% 0% transparent; }
