@@ -96,8 +96,49 @@ form div {height:24px; clear:both; margin-bottom:6px; padding:5px 0px;}
 form div label {float:left; width:auto;}
 form div input {float:left; width:52%; float:right;}
 form div input.invalid {border-bottom:1px solid #f00;}
-form fieldset input[type=submit], form fieldset button { padding:5px; border:1px solid #ccc; background-color:#eee; color:#666; text-shadow:-1px -1px 0px #fff; cursor:pointer;}
+form fieldset input[type=submit], form fieldset button { display: inline-block;
 
+    padding: 4px 8px;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    font-size: 13px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbfcfb), to(#9d9e9d));
+    background: -moz-linear-gradient(#fbfcfb, #9d9e9d);
+    background-color: #eee;
+
+    text-shadow: rgba(255, 255, 255, 0.4) 0px 1px;
+
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+	cursor:pointer;
+}
+form fieldset input:hover[type=submit], form fieldset button:hover {
+	background: #B5B5B5;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px,
+                        black 0px 1px 3px inset,
+                        rgba(0, 0, 0, 0.4) 0px -5px 12px inset;
+
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px,
+                     black 0px 1px 3px inset,
+                     rgba(0, 0, 0, 0.4) 0px -5px 12px inset;
+
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px,
+                black 0px 1px 3px inset,
+                rgba(0, 0, 0, 0.4) 0px -5px 12px inset;
+
+    text-shadow: rgba(255, 255, 255, 0.3) 0px 1px;
+	cursor:pointer;
+}
 
 strong   		{	font-weight:600;}
 em, dfn  		{	font-style:italic;}
