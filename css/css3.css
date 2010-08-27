@@ -16,13 +16,19 @@
 	horizontal-offset (length, required) | vertical-offset (length, required) | blur-radius (length, optional) | shadow-color (color, optional) 
 */
 
-.shadow {	text-shadow:1px 1px 1px #666;	}/*<-- edit the color you wish to use in your shadows */
+.shadow {	text-shadow:1px 1px 1px #666; 
+	behavior: url(css/PIE.htc); 	}/*<-- edit the color you wish to use in your shadows */
+	
+.shadow_multiple {text-shadow: -2px -2px 0px #1fd31f,
+             2px 2px 0px #1f9ad3;
+}
 
 .rounded {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	border:1px solid #ccc;
+	behavior: url(css/PIE.htc);
 }
 
 .rounded_top_right {
@@ -30,17 +36,46 @@
 	-moz-border-radius-topright:5px;
 	-webkit-border-top-right-radius:5px;
 	border:1px solid #ccc;
+	behavior: url(css/PIE.htc);
 }
 
 .box_shadow {
 	-webkit-box-shadow: 1px 1px 3px #ccc;
 	-moz-box-shadow: 1px 1px 3px #ccc;
 	box-shadow: 1px 1px 3px #ccc;
+	behavior: url(css/PIE.htc);
+}
+.box_shadow_multiple {
+	-webkit-box-shadow: 0 0 20px #ccc inset,
+						10px 7px 15px #f0f961,
+						-10px 7px 15px #55fc6d,
+						-10px -7px 15px #55d7fc,
+						10px -7px 15px #fc9c9c;
+	
+	-moz-box-shadow: 0 0 20px #ccc inset,
+						10px 7px 15px #f0f961,
+						-10px 7px 15px #55fc6d,
+						-10px -7px 15px #55d7fc,
+						10px -7px 15px #fc9c9c;
+	
+	box-shadow:		0 0 20px #ccc inset,
+						10px 7px 15px #f0f961,
+						-10px 7px 15px #55fc6d,
+						-10px -7px 15px #55d7fc,
+						10px -7px 15px #fc9c9c;
 }
 
 .rotate {
 	-webkit-transform: rotate(-15deg);
 	-moz-transform: rotate(-15deg);
+	behavior: url(css/PIE.htc);
 }
 
-.gradient {background: -moz-linear-gradient(center bottom , rgb(209, 209, 209) 14%, rgb(230, 230, 230) 57%, rgb(224, 224, 224) 91%) repeat scroll 0% 0% transparent; }
+.gradient {
+		background: 
+			-moz-linear-gradient(center bottom , rgb(209, 209, 209) 14%, rgb(230, 230, 230) 57%, rgb(224, 224, 224) 91%) repeat scroll 0% 0% transparent; 
+	behavior: url(css/PIE.htc); }
+.gradient_radial {
+	 background:-webkit-gradient(radial, center center, 0, center center, 50, from(#eee), to(#ccc));
+	 background: -moz-radial-gradient(#eee, #ccc); 
+}
