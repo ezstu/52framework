@@ -66,7 +66,11 @@
           }
         }
     </script>
-
+	
+    <!-- this script is needed for using advanced css selectors in your css -->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    	<script src="js/selectivizr.js"></script>
+    <![endif]-->  
     
     <!-- the following style is for demonstartion purposes only and is not needed for anything but inspiration -->
     <style>
@@ -386,7 +390,7 @@
 </section><!-- row -->
 
 <!-- this section will show you the power of localStorage -->
-<section class="row" id="canvas">
+<section class="row" id="local_storage">
 	<h2>Local Storage</h2>
     <div class="col_16 col" style="margin-top:15px;">
     	
@@ -395,6 +399,20 @@
     	<a href="https://developer.mozilla.org/en/Canvas_tutorial/Basic_usage" class="documentation">Canvas Example Documentation</a>
     </div><!-- col_16 -->
 </section><!-- row -->
+<section class="row" id="selectors">
+	<h2>CSS Selectors (with ie support)</h2>
+    <div class="col_16 col">
+    	<style>
+			input[value=test] {background-color:#000; color:#fff;}
+			ul.odd li:nth-child(odd) { background-color:#eee; }
+		</style>
+        <input value="test" /> notice i have selected this input tag by using the <code class="inline">input[value=test]</code> you can exchange the "attribute type"="value for the attribute" anyway you want.
+        <ul class="odd"><li>Odd</li><li>Even</li><li>Odd</li><li>Even</li></ul>
+    </div><!-- col_16-->
+    <div class="col_16 col">
+    	<a href="http://selectivizr.com/" class="documentation">More Information on Using CSS Selectors</a>
+    </div><!-- col_16 -->
+</section>
 <footer class="row">
 
 	<div class="col_16 col">all rights reserved &copy; <a href="http://www.enavu.com">enavu network</a> | 52framework the framework from the future</div>
