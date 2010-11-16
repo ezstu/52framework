@@ -68,6 +68,7 @@
 .rotate {
 	-webkit-transform: rotate(-15deg);
 	-moz-transform: rotate(-15deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=-1);
 	behavior: url(css/PIE.htc);
 }
 
