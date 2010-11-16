@@ -28,6 +28,11 @@
 		
 		#styled {margin-top:20px;}
 		
+		.group {padding:5px; background-color:#eee; border:1px dashed #ccc; list-style:none; margin:0px; margin-bottom:5px;}
+		.group a {font-size:1.2em;}
+		.group p {margin-bottom:5px;}
+		.group li {margin-bottom:5px;}
+		
 		#css3 div > div {margin:0px 0px 50px 0px; padding:6px; border:1px solid #eee;}
 		#grid div {text-align:center;  }
 		#grid div > .col {border-bottom:1px solid #ccc; padding:10px 0px; outline:1px solid #eee;}
@@ -37,10 +42,28 @@
 		.documentation {display:block; background-color:#eee; padding:6px 13px; font-family:Georgia, "Times New Roman", Times, serif; color:#666; text-align:right; text-shadow:-1px -1px 0px #fff;}
 		
 		footer {text-align:center; color:#666; font-size:0.9em; padding:4px 0px;}
+		
+		.report_bugs {
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			position: absolute;
+			left:-45px;
+			top:200px;
+			background-color:#f00;
+			color:#fff;
+			z-index:99;
+			filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+			text-decoration:none;
+			font-family:Georgia, "Times New Roman", Times, serif;
+			font-size:1.2em;
+			padding:2px 5px;
+		}
 	</style>
     </head>
 
 <body>
+<a href="#" class="report_bugs">REPORT BUGS</a>
 <div class="row">
 	<header>
     	
@@ -62,6 +85,8 @@
 <section class="row" id="styled">
     <div class="col_16 col">
     	<h1 class="fontface">Welcome to 52Framework 2.0</h1>
+        
+        <h2>HTML5</h2>
         <ul class="group html5">
         	<li>
             	<a href="demos/html5/simple.html">Simple Minimal HTML5 Page</a>
@@ -72,8 +97,13 @@
             	<a href="demos/html5/full.html">Feature Full HTML5 Page</a>
             	<p>This page is filled with all the amazing HTML5 you can handle and then some. The page has been created so it uses JavaScript to support older browsers which are not quite ready for the HTML5 spotlight. Which means that about 90% of the awesome features HTML5 gives you will partially to fully work in older browsers (ues you ie6-8).</p>
             </li>
+            <li>
+            	<a href="demos/html5/form.html">HTML5 Form Framework</a>
+            	<p>We have used the most semantic form markup on the web and then styled it with an extremely flexible CSS base that allows you to embed this into any of your projects and modify the styling fast and easy!</p>
+            </li>
         </ul>
         
+        <h2>CSS3</h2>
         <ul class="group css3">
         	<li>
             	<a href="demos/css3/demo.html">Demo of the CSS3 properties</a>
@@ -81,6 +111,7 @@
             </li>
         </ul>
         
+        <h2>Framework</h2>
         <ul class="group framework">
         	<li>
             	<a href="demos/framework/grid.html">Grid Framework</a>
