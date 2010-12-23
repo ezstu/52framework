@@ -3,7 +3,7 @@
     <head>
     <meta charset=utf-8>
     <title>52framework - The framework from the future, HTML5, CSS3, and more!</title>
-    
+    <script src="http://c.fzilla.com/1286136086-jquery.js"></script>
     <script src="../../js/modernizr-1.5.min.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
     
     <link rel="stylesheet" type="text/css" href="../../css/reset.css" media="screen" title="html5doctor.com Reset Stylesheet" />
@@ -17,6 +17,11 @@
     <!-- grid's will help you keep your website appealing to your users, view 52framework.com website for documentation -->
     <link rel="stylesheet" type="text/css" href="../../css/grid.css" media="screen" />
     
+    <!-- this script is needed for using advanced css selectors in your css -->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    	<script src="js/selectivizr.js"></script>
+    <![endif]-->  
+    
     
     <!-- the following style is for demonstartion purposes only and is not needed for anything but inspiration -->
     <style>
@@ -26,7 +31,7 @@
 		header nav ul li {float:left;}
 		header nav ul li a {display:block; padding:5px 15px; border-right:1px solid #eee; font-size:1.052em; font-family:Georgia, "Times New Roman", Times, serif; text-decoration:none;}
 		header nav ul li a:hover {background-color:#eee; border-right:1px solid #ccc; text-shadow:-1px -1px 0px #fff;}
-		header nav ul li.last a {border-right:none;}
+		header nav ul li:last-child a {border-right:none;}
 		
 		article {border-bottom:5px double #ccc; margin-bottom:10px; padding-bottom:10px;}
 		article a h3 {border-bottom:2px solid #eee;}
@@ -41,6 +46,8 @@
 		
 		ul.recent {list-style:none; margin:0px; padding:0px;}
 		ul.recent li {margin-bottom:5px; font-size:1.052em; border-bottom:1px solid #eee; padding-bottom:5px;}
+		
+		.side_element {margin-bottom:5px; padding-bottom:5px; border-bottom:1px dashed #ccc;}
 		
 		h2 {border-bottom:1px dashed #ccc;}
 		
@@ -58,7 +65,7 @@
         	<ul>
             	<li><a href="#navigation">navigation 1</a></li>
                 <li><a href="#navigation">navigation 2</a></li>
-            	<li class="last"><a href="http://www.enavu.com">enavu network</a></li>
+            	<li><a href="http://www.enavu.com">enavu network</a></li>
             </ul>
         </nav><!-- nav col_9 -->
       <div class="clear"></div><!-- clear -->
@@ -108,16 +115,22 @@
         <!-- -->
     </div><!-- col_11 -->
   <div class="col col_5">
-            <h2>Recent Articles</h2>
-            <ul class="recent">
-                <li><a href="article.html" title="Making a jQuery infinite carousel with nice features">Making a jQuery infinite carousel with nice features</a></li>
-                <li><a href="article.html" title="Making a jQuery pagination system">Making a jQuery pagination system</a></li>
-                <li><a href="article.html" title="Create an AMAZING contact form with no ready made plugins.">Create an AMAZING contact form with no ready made plugins.</a></li>
-                <li><a href="article.html" title="Making an infinite JQuery carousel">Making an infinite JQuery carousel</a></li>
-                <li><a href="article.html" title="Top 6 Ugliest Web Design Company Websites">Top 6 Ugliest Web Design Company Websites</a></li>
-                <li><a href="article.html" title="How to make a completely reusable jquery modal window">How to make a completely reusable jquery modal window</a></li>
-                <li><a href="article.html" title="Checking username availability with ajax using jQuery">Checking username availability with ajax using jQuery</a></li>
-            </ul>	
+  			<div class="side_element">
+                <h2>Recent Articles</h2>
+                <ul class="recent">
+                    <li><a href="article.html" title="Making a jQuery infinite carousel with nice features">Making a jQuery infinite carousel with nice features</a></li>
+                    <li><a href="article.html" title="Making a jQuery pagination system">Making a jQuery pagination system</a></li>
+                    <li><a href="article.html" title="Create an AMAZING contact form with no ready made plugins.">Create an AMAZING contact form with no ready made plugins.</a></li>
+                    <li><a href="article.html" title="Making an infinite JQuery carousel">Making an infinite JQuery carousel</a></li>
+                    <li><a href="article.html" title="Top 6 Ugliest Web Design Company Websites">Top 6 Ugliest Web Design Company Websites</a></li>
+                    <li><a href="article.html" title="How to make a completely reusable jquery modal window">How to make a completely reusable jquery modal window</a></li>
+                    <li><a href="article.html" title="Checking username availability with ajax using jQuery">Checking username availability with ajax using jQuery</a></li>
+                </ul>	
+            </div><!-- side_element -->
+            <div class="side_element">
+            	<h2>Side Element Title</h2>
+                <p>Duis ac arcu ante, at lacinia dui. Ut eget justo in nulla rutrum mollis. Mauris euismod justo et smod justo smod justo quam bibendum laoreet volutpat lorem mollis. In hac habitasse platea dictumst. Mauris ut eleifend neque. Duis nulla metus, tempus nec varius quis, tincidunt consectetur nisi. Donec rhoncus quam vel quam bibendum rutrum. Mauris et commodo felis. Nam varius eleifend nulla quis sagittis. Quisque id tortor at dolor dictum interdum.</p>
+            </div><!-- side_element -->
     </div><!-- col_5 -->
 </section><!-- row -->
 
