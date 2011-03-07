@@ -45,21 +45,8 @@
 		})
 	</script>
     
-    <!-- Canvas example taken from https://developer.mozilla.org/en/Canvas_tutorial/Basic_usage -->
-	<script>
-        function draw() {
-          var canvas = document.getElementById("b");
-          if (canvas.getContext) {
-            var ctx = canvas.getContext("2d");
-    
-            ctx.fillStyle = "rgb(200,0,0)";
-            ctx.fillRect (10, 10, 55, 50);
-    
-            ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-            ctx.fillRect (30, 30, 55, 50);
-          }
-        }
-    </script>
+    <!-- Canvas example taken from http://www.williammalone.com/articles/html5-canvas-example/ -->
+	<script src="../../canvas/canvas_example.js"></script>
 	
     <!-- this script is needed for using advanced css selectors in your css -->
     <!--[if (gte IE 6)&(lte IE 8)]>
@@ -91,7 +78,7 @@
 	</style>
     </head>
 
-<body onload="draw();">
+<body>
 <div class="row">
 	<header>
     	
@@ -117,7 +104,7 @@
         <!-- Begin VideoJS -->
         <div class="video-js-box vim-css">
         <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
-        <video class="video-js" width="640" height="264" controls preload poster="http://video-js.zencoder.com/oceans-clip.png">
+        <video class="video-js" width="640" height="264" poster="http://video-js.zencoder.com/oceans-clip.png" controls preload>
           <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
           <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"' />
           <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg; codecs="theora, vorbis"' />
@@ -308,73 +295,10 @@
 <section class="row" id="canvas">
 	<h2>Canvas</h2>
     <div class="col_16 col" style="margin-top:15px;">
-    	<article></article>
-    	<canvas id="b" width="90" height="90"></canvas>
-        <canvas>
-        <script>
-        buildSpinner({ x : 50, y : 50, size : 20, degrees : 30 });
-
-        function buildSpinner(data) {
-          
-          var canvas = document.createElement('canvas');
-          canvas.height = 100;
-          canvas.width = 300;
-          document.getElementsByTagName('article')[4].appendChild(canvas);
-          var ctx = canvas.getContext("2d"),
-            i = 0, degrees = data.degrees, loops = 0, degreesList = [];
-            
-          for (i = 0; i < degrees; i++) {
-            degreesList.push(i);
-          }
-          
-          // reset
-          i = 0;
-          
-          // so I can kill it later
-          window.canvasTimer = setInterval(draw, 1000/degrees);  
-        
-          function reset() {
-            ctx.clearRect(0,0,100,100); // clear canvas
-            
-            var left = degreesList.slice(0, 1);
-            var right = degreesList.slice(1, degreesList.length);
-            degreesList = right.concat(left);
-          }
-          
-          function draw() {
-            var c, s, e;
-        
-            var d = 0;
-        
-            if (i == 0) {
-              reset();
-            }
-        
-            ctx.save();
-        
-            d = degreesList[i];
-            c = Math.floor(255/degrees*i);
-            ctx.strokeStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
-            ctx.lineWidth = data.size;
-            ctx.beginPath();
-            s = Math.floor(360/degrees*(d));
-            e = Math.floor(360/degrees*(d+1)) - 1;
-        
-            ctx.arc(data.x, data.y, data.size, (Math.PI/180)*s, (Math.PI/180)*e, false);
-            ctx.stroke();
-        
-            ctx.restore();
-        
-            i++;
-            if (i >= degrees) {
-              i = 0;
-            }
-          }  
-        }
-        </script>
+    	<div id="canvasCrossBrowserDiv"></div>
     </div><!-- col_16 -->
   <div class="col_16 col">
-    	<a href="https://developer.mozilla.org/en/Canvas_tutorial/Basic_usage" class="documentation">Canvas Example Documentation</a>
+    	<a href="http://www.williammalone.com/articles/html5-canvas-example/" class="documentation">Canvas Example Documentation</a>
     </div><!-- col_16 -->
 </section><!-- row -->
 
